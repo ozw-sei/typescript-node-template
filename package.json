@@ -11,7 +11,7 @@
   "scripts": {
     "prepare": "tsc",
     "fmt": "prettier --write \"**\"",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
     "prettier": "^2.2.1",
