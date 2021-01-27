@@ -13,6 +13,9 @@
     "fmt": "prettier --write \"**\"",
     "build": "tsc -p tsconfig.build.json"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
