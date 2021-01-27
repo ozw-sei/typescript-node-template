@@ -1,6 +1,5 @@
 export class Animal {
   bark(): string {
-    return "bark"
+    return "bark";
   }
 }
-
