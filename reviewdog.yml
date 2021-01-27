@@ -1,7 +1,6 @@
 name: test-console-client
 
-on:
-  pull_request:
+on: [pull_request]
 
 jobs:
   reviewdog:
