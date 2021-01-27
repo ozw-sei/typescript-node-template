@@ -1,7 +1,6 @@
-name: test-console-client
+name: reviewdog
 
-on:
-  pull_request:
+on: [pull_request]
 
 jobs:
   reviewdog:
@@ -13,19 +12,28 @@ jobs:
           node-version: "12.x"
       - uses: actions/checkout@v1
 
-      - name: Install node_modules
-        run: yarn
-      - name: test
-        run: |
-          yarn test --watchAll=false
-
       - name: lint-warn
         uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          workdir: ./console/client
           level: warn
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - uses: actions/checkout@v1
+
+      - name: Install node_modules
+        run: yarn
+
+      - name: test
+        run: |
+          yarn test --watchAll=false
 
       - name: check-prettier
         run: |
