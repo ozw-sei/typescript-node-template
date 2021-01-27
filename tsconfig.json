@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "moduleResolution": "node",
     "module": "commonjs",
+    "noImplicitAny": false,
+    "incremental": true,
     "strict": true,
-    "noImplicitThis": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist"
+    "declaration": true,
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": ["./lib/*.ts"]
 }
