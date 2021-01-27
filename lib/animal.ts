@@ -1,4 +1,4 @@
-class Animal {
+export class Animal {
   bark(): string {
     return "bark"
   }
