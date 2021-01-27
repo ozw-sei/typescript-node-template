@@ -8,7 +8,7 @@
     "build",
     "fixtures",
     "fixtures_old",
-    "src/__tests__",
+    "**/__tests__",
     "tmp"
   ]
 }
