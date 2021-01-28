@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "prepare": "npm run build",
-    "fmt": "prettier --write \"**\"",
+    "fmt": "prettier --write \"**.{js,jsx,ts,tsx,json,yml}\"",
     "build": "tsc -p tsconfig.build.json",
     "preinstall": "typesync || :",
     "test": "jest"
