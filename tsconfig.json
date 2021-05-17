@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "moduleResolution": "node",
     "module": "commonjs",
-    "noImplicitAny": false,
-    "incremental": true,
-    "strict": true,
-    "declaration": true,
+    "rootDir": ".",
+    "target": "es6",
     "sourceMap": true,
-    "esModuleInterop": true
+    "outDir": "dist"
   },
-  "include": ["./lib/*.ts"]
+  "include": ["./lib/*.ts", "serverless.ts"],
+  "exclude": [
+    "node_modules"
+  ]
 }
